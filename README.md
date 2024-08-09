@@ -8,10 +8,9 @@
 
 - 🌱 Estou aprendendo **BlockChain - DIO**
 
-- 👨‍💻 Porifólio pessoal [https://www.textopro.com.br/](https://www.textopro.com.br/)
-
-- 📝 Meu Blog sobre criptomoedas [https://www.correiobitcoin.com.br/](https://www.correiobitcoin.com.br/)
-
+- 👨‍💻 Porifólio pessoal: <br>
+      [Site de vendas de texto](https://www.textopro.com.br/) <br>
+      [Gerador de carteira BTC](https://carteira-btc.onrender.com/)
 - 📫 Meu email **carlosllemes@icloud.com**
 
 - 📄 Sobrê mim - Sou Carlos Lemes, Coordenador de Operações com uma sólida base em Marketing Digital e Gerenciamento de Projetos. Autodidata e apaixonado por simplificar processos complexos e automatizar tarefas repetitivas, sempre busco inovação e eficiência.
