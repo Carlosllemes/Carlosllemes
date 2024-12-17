@@ -1,10 +1,179 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.3">
-  <diagram name="Página-1" id="T6Lj9qEDoROEYddQFhZs">
-    <mxGraphModel>
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1"
+ arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="#ffffff"
+ math="0" shadow="0">
+  <root>
+    <mxCell id="0"/>
+    <mxCell id="1" parent="0"/>
+
+    <!-- ENTIDADE: EMPRESA -->
+    <mxCell id="empresa" value="EMPRESA
+(id_empresa PK)
+nome
+email_cs
+email_cliente
+sig_antigo
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="50" y="50" width="180" height="110" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: DOMINIO -->
+    <mxCell id="dominio" value="DOMINIO
+(id_dominio PK)
+dominio
+dominio_tratado
+fk_empresa FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#f8cecc;strokeColor=#b85450;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="300" y="50" width="180" height="90" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: EXECUCAO -->
+    <mxCell id="execucao" value="EXECUCAO
+(id_execucao PK)
+data_ini
+data_fim
+status
+conclusao
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="550" y="50" width="200" height="110" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: POST -->
+    <mxCell id="post" value="POST
+(id_post PK)
+titulo
+meta_descricao
+conteudo
+qtd_palavras
+publicado
+fk_empresa FK
+fk_dominio FK
+fk_execucao FK
+autor
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="300" y="220" width="210" height="150" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: ERRO_LOG -->
+    <mxCell id="erro_log" value="ERRO_LOG
+(id_erro PK)
+tipo_erro
+descricao
+status_chamado
+external_ticket_id
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="580" y="220" width="220" height="110" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: KEYWORD -->
+    <mxCell id="keyword" value="KEYWORD
+(id_keyword PK)
+palavra
+url
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="50" y="220" width="170" height="90" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: IMAGEM -->
+    <mxCell id="imagem" value="IMAGEM
+(id_imagem PK)
+url_imagem
+banco_imagem
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="50" y="350" width="170" height="90" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: SUBTITULO -->
+    <mxCell id="subtitulo" value="SUBTITULO
+(id_subtitulo PK)
+texto
+ordem
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="250" y="400" width="170" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: FAQ -->
+    <mxCell id="faq" value="FAQ
+(id_faq PK)
+pergunta
+resposta
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="450" y="400" width="170" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- ENTIDADE: VIDEO -->
+    <mxCell id="video" value="VIDEO
+(id_video PK)
+url_video
+video_id
+fk_post FK
+..." style="shape=rectangle;whiteSpace=wrap;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=2;fontSize=12;" vertex="1" parent="1">
+      <mxGeometry x="650" y="400" width="170" height="80" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: EMPRESA - DOMINIO (1:N) -->
+    <mxCell id="edge-empresa-dominio" edge="1" parent="1" source="empresa" target="dominio"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: EMPRESA - POST (1:N) -->
+    <mxCell id="edge-empresa-post" edge="1" parent="1" source="empresa" target="post"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: DOMINIO - POST (1:N) -->
+    <mxCell id="edge-dominio-post" edge="1" parent="1" source="dominio" target="post"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: EXECUCAO - POST (1:N) -->
+    <mxCell id="edge-execucao-post" edge="1" parent="1" source="execucao" target="post"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - ERRO_LOG (1:N) -->
+    <mxCell id="edge-post-erro" edge="1" parent="1" source="post" target="erro_log"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - KEYWORD (1:N) -->
+    <mxCell id="edge-post-keyword" edge="1" parent="1" source="post" target="keyword"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - IMAGEM (1:N) -->
+    <mxCell id="edge-post-imagem" edge="1" parent="1" source="post" target="imagem"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - SUBTITULO (1:N) -->
+    <mxCell id="edge-post-subtitulo" edge="1" parent="1" source="post" target="subtitulo"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - FAQ (1:N) -->
+    <mxCell id="edge-post-faq" edge="1" parent="1" source="post" target="faq"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+    <!-- RELACIONAMENTO: POST - VIDEO (1:N) -->
+    <mxCell id="edge-post-video" edge="1" parent="1" source="post" target="video"
+            style="endArrow=block;endFill=1;strokeWidth=2;">
+      <mxGeometry relative="1" as="geometry"/>
+    </mxCell>
+
+  </root>
+</mxGraphModel>
