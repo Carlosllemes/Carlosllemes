@@ -9,7 +9,7 @@
 - 🌱 Estou aprendendo **BlockChain - DIO**
 
 - 👨‍💻 Porifólio pessoal: <br>
-      [Site de vendas de texto](https://www.textopro.com.br/) <br>
+      [Blog mercado Financeiro](https://www.textopro.com.br/) <br>
       [Gerador de carteira BTC](https://carteira-btc.onrender.com/)
 - 📫 Meu email **carlosllemes@icloud.com**
 
