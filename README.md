@@ -4,7 +4,7 @@
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=carlosllemes&label=Profile%20views&color=0e75b6&style=flat" alt="carlosllemes" /> </p>
 
 
-- 🔭 Trabalhando atualmente com Tech Lead [Doutores da Web](https://www.doutoresdaweb.com.br/)
+- 🔭 Trabalhando atualmente com Dev PHP Pleno [Auditto](https://www.auditto.com.br/)
 
 - 🌱 Estou aprendendo **BlockChain - DIO**
 
